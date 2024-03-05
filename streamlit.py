@@ -126,9 +126,12 @@ def draw_text(window, text, x, y):
     window.blit(text_surface, text_rect)
 
 def main():
-    st.set_page_config(page_title="Sudoku Generator")
+    st.set_page_config(page_title="Generador de Sudokus")
 
-    sudoku = generate_sudoku()
+    if st.button("Generar nuevo Sudoku"):
+        sudoku = generate_sudoku()
+    else:
+        sudoku = generate_sudoku()
 
     draw_grid(sudoku)
 

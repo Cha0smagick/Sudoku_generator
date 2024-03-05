@@ -119,6 +119,8 @@ def draw_grid(sudoku):
     pygame.image.save(window, stream)
     st.image(stream)
 
+    pygame.quit()  # Agregar esta línea para cerrar correctamente la ventana de Pygame
+
 def draw_text(window, text, x, y):
     font = pygame.font.Font(None, 40)
     text_surface = font.render(text, True, BLACK)
